@@ -13,7 +13,7 @@ st.write("Llena los datos del paciente y presiona el botón para calcular el rie
 
 @st.cache_data
 def cargar_y_entrenar_modelo():
-    url = "https://raw.githubusercontent.com/hectortirado/app-modelo-hipotension/main/X_train_2025.csv"
+    url = "https://raw.githubusercontent.com/hecaltiorIA/modelo-hipotension/main/X_train_2025.csv"
     df = pd.read_csv(url)
     df['MAP_low'] = (df['MAP_lowest'] < 65).astype(int)
     df.drop(columns=['recordid', 'MAP_lowest'], inplace=True)
